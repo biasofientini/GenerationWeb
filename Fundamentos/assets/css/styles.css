@@ -1,0 +1,69 @@
+/*
+Estilos de index.html
+*/
+.center {
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+    display: inline;
+    padding: 30px;
+}
+.menul li a {
+    text-decoration: none;
+    color: dimgrey;
+}
+.menul li a:hover{
+    color:darkgrey;
+}
+.p-30{
+    padding: 30px;
+}
+.br-50{
+    border-radius: 50%;
+}
+.wh{
+    width: 320px;
+    height: 300px;
+}
+.tm-social{
+    width: 50px;
+    height: 50px;
+}
+.justify{
+    align-items: center;
+}
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.btn-hover{
+    min-height: 70px; 
+    width: 70px; 
+    border-radius: 50%; 
+    border: 5px white; 
+    background-color: rgb(189, 195, 199); font-family: "Source Sans Pro", sans-serif; color: rgb(12, 11, 12); 
+    font-weight: 5; 
+    font-size: 17px; 
+    letter-spacing: 2px;
+}
+.btn-hover:hover{
+    color: floralwhite;
+    background-color: darkgrey;
+}
+/*:root {
+    color-scheme: light dark;
+}*/
+/*
+Estilos de contato.html
+*/
