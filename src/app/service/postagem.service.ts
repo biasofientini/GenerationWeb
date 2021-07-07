@@ -23,8 +23,20 @@ export class PostagemService {
     return this.http.get<Postagem[]>('https://blogpessoalbeatriz.herokuapp.com/postagens', this.createHeaders())
   }
 
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://blogpessoalbeatriz.herokuapp.com/postagens/${id}`, this.createHeaders())
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>('https://blogpessoalbeatriz.herokuapp.com/postagens', postagem, this.createHeaders())
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://blogpessoalbeatriz.herokuapp.com/postagens', postagem, this.createHeaders())
+  }
+
+  deletePostagem(id: number) {
+    return this.http.delete(`https://blogpessoalbeatriz.herokuapp.com/postagens/${id}`, this.createHeaders())
   }
 
 }

@@ -73,14 +73,10 @@
                 <div class="card text-center" *ngFor='let item of user.postagem'>
                     <div class="card-body">
                         <h5 class="card-title m-0">{{item.titulo}}</h5>
-                        <small class="text-muted">Tema: {{item.tema.descricao}}</small>
                         <p class="card-text mt-3">{{item.texto}}</p>
                         <p class="card-text"><small class="text-muted">{{item.data | date : "dd/MM/yyyy 'às'
                                 HH:mm"}}</small></p>
-
-                        <a href="">Editar</a>
-                        <a href="">Apagar</a>
-
+                        <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
                     </div>
                 </div>
             </div>
