@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BsModalService } from 'ngx-bootstrap/modal'
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal'
+import { AlertaComponent } from '../alerta/alerta.component';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,9 @@ export class AlertasService {
     private bsModalService: BsModalService
   ) { }
 
-  private showAlert(message: string, tipo: string){
-    const bsModalRef = this.bsModalService.show(AlertasComponent)
-    bsModalRef.content.type = tipo
+  private showAlert(message: string, type: string){
+    const bsModalRef: BsModalRef = this.bsModalService.show(AlertaComponent)
+    bsModalRef.content.type = type
     bsModalRef.content.message = message
   }
 
