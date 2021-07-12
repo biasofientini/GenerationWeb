@@ -55,6 +55,16 @@
     </ul>
     <div class="tab-content mt-5" id="myTabContent">
         <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="titulo"
+                            placeholder="Digite um título de postagem para pesquisar" [(ngModel)]='tituloPost'
+                            (keyup)='findByTituloPostagem()'>
+                    </div>
+                </div>
+            </div>
             <div class="card-columns">
                 <div class="card text-center" *ngFor='let item of listaPostagens'>
                     <div class="card-body">
@@ -82,7 +92,15 @@
             </div>
         </div>
         <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="postagemTema-tab">
-            
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="titulo"
+                            placeholder="Digite um título de tema para pesquisar" [(ngModel)]='nomeTema'
+                            (keyup)='findByNomeTema()'>
+                    </div>
+                </div>
+            </div>
             <div class="card-columns" *ngFor='let tema of listaTemas'>
                 <div class="card text-center" *ngFor='let item of tema.postagem'>
                     <div class="card-body">
